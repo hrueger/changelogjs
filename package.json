@@ -1,0 +1,39 @@
+{
+  "name": "changelogjs",
+  "version": "1.0.0",
+  "description": "A small customizable changelog generator",
+  "main": "src/index.js",
+  "bin": {
+    "@hrueger/changelogjs": "bin/changelogjs",
+    "changelogjs": "bin/changelogjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "bin/",
+    "src/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrueger/changelogjs.git"
+  },
+  "keywords": [
+    "changelog",
+    "generator",
+    "customizable",
+    "cli"
+  ],
+  "author": "H. Rüger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hrueger/changelogjs/issues"
+  },
+  "homepage": "https://github.com/hrueger/changelogjs#readme",
+  "dependencies": {
+    "chalk": "~3.0.0",
+    "simple-git": "~1.131.0",
+    "find-up": "~4.1.0",
+    "esm": "~3.2.25"
+  }
+}
