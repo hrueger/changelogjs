@@ -122,7 +122,7 @@ async function build(config, mode) {
     if (mode.mode == "json") {
         content = {};
     } else if (mode.mode == "md") {
-        content = "# Changelog\n\n";
+        content = `# ${config.title}\n\n`;
     } else if (mode.mode == "html-gh") {
         content = await startHTML(config);
     }
