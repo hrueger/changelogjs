@@ -167,7 +167,7 @@ async function build(config, mode) {
                     } else {
                         content += endSection();
                     }
-                    content += startSection("1.0.5", commitDate);
+                    content += startSection(commitDate.split(" ")[0], commitDate.substring(3));
                 }
             }
             if (mode.mode == "json") {
