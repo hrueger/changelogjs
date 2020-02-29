@@ -32,8 +32,9 @@
   "homepage": "https://github.com/hrueger/changelogjs#readme",
   "dependencies": {
     "chalk": "~3.0.0",
-    "simple-git": "~1.131.0",
+    "esm": "~3.2.25",
     "find-up": "~4.1.0",
-    "esm": "~3.2.25"
+    "node-fetch": "^2.6.0",
+    "simple-git": "~1.131.0"
   }
 }

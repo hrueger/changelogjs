@@ -1,7 +1,7 @@
 const chalk = require("chalk");
 const findUp = require("find-up");
 const fs = require("fs");
-
+const fetch = require("node-fetch");
 function getVersion() {
     return JSON.parse(fs.readFileSync(path.join(__dirname, "../package.json"))).version;
 }
@@ -80,7 +80,7 @@ export async function cli(args) {
         console.log(chalk.yellow("No \"changelogjs.json\" file was found, the default configuration is used.\n"));
     }
     for (const mode of config.modes) {
-        build(config, mode);
+        await build(config, mode);
     }
     
 }
@@ -124,7 +124,7 @@ async function build(config, mode) {
     } else if (mode.mode == "md") {
         content = "# Changelog\n\n";
     } else if (mode.mode == "html-gh") {
-        content = startHTML(config);
+        content = await startHTML(config);
     }
     const simpleGit = require("simple-git/promise")(".");
     let commits = (await simpleGit.log(["HEAD"])).all;
@@ -215,7 +215,7 @@ function getCommitType(types, commit, defaultCommitType) {
     return commitType;
 }
 
-function startHTML(config) {
+async function startHTML(config) {
     return `<!DOCTYPE html>
     <html lang="en" class="bg-dark text-light">
     <head>
@@ -223,7 +223,7 @@ function startHTML(config) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta http-equiv="content-language" content="en-gb">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <style>${await (await fetch("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")).text()}</style>
         <title>${config.title}</title>
         <style>
             .badge {
