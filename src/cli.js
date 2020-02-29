@@ -321,7 +321,7 @@ function endHTML(config) {
     <hr class="my-6 my-md-10 mx-auto col-md-1">
     <div class="col-md-6 mx-auto text-center text-gray-lighter">
         <p>
-            ${config.footerLinks.map((l) => `<a href="${l.url}" class="m-2">${l.text}</a>`).join("")}
+            ${config.footerLinks.map((l) => `<a href="${l.url}" class="m-2 text-white">${l.text}</a>`).join("")}
         </p>
     </div>
     <footer class="mb-6 px-3 text-gray text-center alt-text-small">
