@@ -1,6 +1,6 @@
 # ChangelogJS
 
-[![npm](https://img.shields.io/npm/v/@hrueger/changelogjs)](https://npmjs.com/package/changelogjs)
+[![npm](https://img.shields.io/npm/v/@hrueger/changelogjs)](https://npmjs.com/package/@hrueger/changelogjs)
 [![Greenkeeper badge](https://badges.greenkeeper.io/hrueger/changelogjs.svg)](https://greenkeeper.io/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](./LICENSE.md)
 [![GitHub last commit](https://img.shields.io/github/last-commit/hrueger/changelogjs?color=brightgreen)](https://github.com/hrueger/changelogjs/commits)
