@@ -12,7 +12,10 @@
   },
   "files": [
     "bin/",
-    "src/"
+    "src/",
+    "!example_html_output.png",
+    "!example_json_output.png",
+    "!example_md_output.png"
   ],
   "repository": {
     "type": "git",
