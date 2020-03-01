@@ -17,10 +17,10 @@ The following modes are avalible:
 | ![Example HTML output](./example_html_output.png) | ![Example Markdown output](./example_md_output.png) | ![Example JSON output](./example_json_output.png) |
 
 ## Installation
-Type `npm install changelogjs` into your terminal.
+Type `npm install changelogjs --global` into your terminal.
 
 ## Usage
-`changelogjs` without any options. If a `changelogjs.json` file is found, this is used as the configuration instead of the default values.
+`changelogjs` without any options. If a `changelogjs.json` file is found in the current folder or above, this is used as the configuration instead of the default values (see below).
 
 ## Configuration
 Create a `changelogjs.json` file ans specify the options below:
