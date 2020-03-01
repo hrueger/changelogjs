@@ -2,6 +2,7 @@ const chalk = require("chalk");
 const findUp = require("find-up");
 const fs = require("fs");
 const fetch = require("node-fetch");
+const path = require("path");
 function getVersion() {
     return JSON.parse(fs.readFileSync(path.join(__dirname, "../package.json"))).version;
 }
